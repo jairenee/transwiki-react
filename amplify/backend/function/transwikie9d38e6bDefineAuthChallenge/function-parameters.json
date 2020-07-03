@@ -1,0 +1,13 @@
+{
+  "trigger": true,
+  "modules": ["captcha-define-challenge"],
+  "parentResource": "transwikie9d38e6b",
+  "functionName": "transwikie9d38e6bDefineAuthChallenge",
+  "resourceName": "transwikie9d38e6bDefineAuthChallenge",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/DefineAuthChallenge",
+  "triggerTemplate": "DefineAuthChallenge.json.ejs",
+  "roleName": "transwikie9d38e6bDefineAuthChallenge",
+  "skipEdit": true
+}

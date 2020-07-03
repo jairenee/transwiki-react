@@ -1,0 +1,22 @@
+{
+  "trigger": true,
+  "modules": ["verification-link"],
+  "parentResource": "transwikie9d38e6b",
+  "functionName": "transwikie9d38e6bCustomMessage",
+  "resourceName": "transwikie9d38e6bCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "roleName": "transwikie9d38e6bCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "transwiki.net",
+  "EMAILSUBJECT": "Confirm your email for the TransWiki!",
+  "EMAILMESSAGE": "Someone has requested an account for the TransWiki (www.transwiki.net) with this email. If this was you, please use the link below to confirm your email address for this account. If not, please disregard this message. Thanks for signing up to help the community!",
+  "RESOURCENAME": "resourceName"
+}

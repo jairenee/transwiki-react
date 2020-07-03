@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-transwiki-dev-184302-authRole",
+      "UnauthRoleArn": "arn:aws:iam::364363682416:role/amplify-transwiki-dev-184302-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::364363682416:role/amplify-transwiki-dev-184302-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-transwiki-dev-184302-deployment",
+      "UnauthRoleName": "amplify-transwiki-dev-184302-unauthRole",
+      "StackName": "amplify-transwiki-dev-184302",
+      "StackId": "arn:aws:cloudformation:us-east-1:364363682416:stack/amplify-transwiki-dev-184302/bad21220-b990-11ea-896b-0a803f1342f3",
+      "AmplifyAppId": "d3ngk0kc427njn"
+    },
+    "categories": {
+      "function": {
+        "transwikie9d38e6bDefineAuthChallenge": {},
+        "transwikie9d38e6bCreateAuthChallenge": {},
+        "transwikie9d38e6bVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "6LfruaoZAAAAANnArHKo7Arc-8W9BcG0zsQ6_PDv"
+        },
+        "transwikie9d38e6bCustomMessage": {
+          "REDIRECTURL": "transwiki.net",
+          "EMAILSUBJECT": "Confirm your email for the TransWiki!",
+          "EMAILMESSAGE": "Someone has requested an account for the TransWiki (www.transwiki.net) with this email. If this was you, please use the link below to confirm your email address for this account. If not, please disregard this message. Thanks for signing up to help the community!"
+        }
+      },
+      "auth": {
+        "transwikie9d38e6b": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3ngk0kc427njn",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
