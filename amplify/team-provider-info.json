@@ -10,6 +10,18 @@
             "StackName": "amplify-transwiki-dev-120034",
             "StackId": "arn:aws:cloudformation:us-east-1:364363682416:stack/amplify-transwiki-dev-120034/60e7b620-bd46-11ea-ae95-0a39c55408a9",
             "AmplifyAppId": "d3nxfzk16o5osd"
+        },
+        "categories": {
+            "function": {
+                "transwiki8ae52cecDefineAuthChallenge": {},
+                "transwiki8ae52cecCreateAuthChallenge": {},
+                "transwiki8ae52cecVerifyAuthChallengeResponse": {
+                    "RECAPTCHASECRET": "6LfruaoZAAAAANnArHKo7Arc-8W9BcG0zsQ6_PDv"
+                }
+            },
+            "auth": {
+                "transwiki8ae52cec": {}
+            }
         }
     }
 }

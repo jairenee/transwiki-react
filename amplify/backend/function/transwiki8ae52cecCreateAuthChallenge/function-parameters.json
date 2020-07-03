@@ -1,0 +1,15 @@
+{
+    "trigger": true,
+    "modules": [
+        "captcha-create-challenge"
+    ],
+    "parentResource": "transwiki8ae52cec",
+    "functionName": "transwiki8ae52cecCreateAuthChallenge",
+    "resourceName": "transwiki8ae52cecCreateAuthChallenge",
+    "parentStack": "auth",
+    "triggerEnvs": [],
+    "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/CreateAuthChallenge",
+    "triggerTemplate": "CreateAuthChallenge.json.ejs",
+    "roleName": "transwiki8ae52cecCreateAuthChallenge",
+    "skipEdit": true
+}
