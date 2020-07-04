@@ -1,19 +1,19 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createBlog = /* GraphQL */ `
-  mutation CreateBlog(
-    $input: CreateBlogInput!
-    $condition: ModelBlogConditionInput
+export const createGuide = /* GraphQL */ `
+  mutation CreateGuide(
+    $input: CreateGuideInput!
+    $condition: ModelGuideConditionInput
   ) {
-    createBlog(input: $input, condition: $condition) {
+    createGuide(input: $input, condition: $condition) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -21,22 +21,23 @@ export const createBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
-export const updateBlog = /* GraphQL */ `
-  mutation UpdateBlog(
-    $input: UpdateBlogInput!
-    $condition: ModelBlogConditionInput
+export const updateGuide = /* GraphQL */ `
+  mutation UpdateGuide(
+    $input: UpdateGuideInput!
+    $condition: ModelGuideConditionInput
   ) {
-    updateBlog(input: $input, condition: $condition) {
+    updateGuide(input: $input, condition: $condition) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -44,22 +45,23 @@ export const updateBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
-export const deleteBlog = /* GraphQL */ `
-  mutation DeleteBlog(
-    $input: DeleteBlogInput!
-    $condition: ModelBlogConditionInput
+export const deleteGuide = /* GraphQL */ `
+  mutation DeleteGuide(
+    $input: DeleteGuideInput!
+    $condition: ModelGuideConditionInput
   ) {
-    deleteBlog(input: $input, condition: $condition) {
+    deleteGuide(input: $input, condition: $condition) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -67,6 +69,7 @@ export const deleteBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -78,8 +81,8 @@ export const createPost = /* GraphQL */ `
     createPost(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -87,6 +90,7 @@ export const createPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -111,8 +115,8 @@ export const updatePost = /* GraphQL */ `
     updatePost(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -120,6 +124,7 @@ export const updatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -144,8 +149,8 @@ export const deletePost = /* GraphQL */ `
     deletePost(input: $input, condition: $condition) {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -153,6 +158,7 @@ export const deletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -180,12 +186,13 @@ export const createComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -210,12 +217,13 @@ export const updateComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -240,12 +248,13 @@ export const deleteComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken

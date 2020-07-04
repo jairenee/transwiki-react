@@ -1,16 +1,16 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBlog = /* GraphQL */ `
-  subscription OnCreateBlog {
-    onCreateBlog {
+export const onCreateGuide = /* GraphQL */ `
+  subscription OnCreateGuide($owner: String!) {
+    onCreateGuide(owner: $owner) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -18,19 +18,20 @@ export const onCreateBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
-export const onUpdateBlog = /* GraphQL */ `
-  subscription OnUpdateBlog {
-    onUpdateBlog {
+export const onUpdateGuide = /* GraphQL */ `
+  subscription OnUpdateGuide($owner: String!) {
+    onUpdateGuide(owner: $owner) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -38,19 +39,20 @@ export const onUpdateBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
-export const onDeleteBlog = /* GraphQL */ `
-  subscription OnDeleteBlog {
-    onDeleteBlog {
+export const onDeleteGuide = /* GraphQL */ `
+  subscription OnDeleteGuide($owner: String!) {
+    onDeleteGuide(owner: $owner) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -58,6 +60,7 @@ export const onDeleteBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -66,8 +69,8 @@ export const onCreatePost = /* GraphQL */ `
     onCreatePost {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -75,6 +78,7 @@ export const onCreatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -96,8 +100,8 @@ export const onUpdatePost = /* GraphQL */ `
     onUpdatePost {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -105,6 +109,7 @@ export const onUpdatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -126,8 +131,8 @@ export const onDeletePost = /* GraphQL */ `
     onDeletePost {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -135,6 +140,7 @@ export const onDeletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -159,12 +165,13 @@ export const onCreateComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -186,12 +193,13 @@ export const onUpdateComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -213,12 +221,13 @@ export const onDeleteComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken

@@ -1,16 +1,16 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getBlog = /* GraphQL */ `
-  query GetBlog($id: ID!) {
-    getBlog(id: $id) {
+export const getGuide = /* GraphQL */ `
+  query GetGuide($id: ID!) {
+    getGuide(id: $id) {
       id
       name
       posts {
         items {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
@@ -18,16 +18,17 @@ export const getBlog = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
-export const listBlogs = /* GraphQL */ `
-  query ListBlogs(
-    $filter: ModelBlogFilterInput
+export const listGuides = /* GraphQL */ `
+  query ListGuides(
+    $filter: ModelGuideFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listGuides(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
@@ -36,6 +37,7 @@ export const listBlogs = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -46,8 +48,8 @@ export const getPost = /* GraphQL */ `
     getPost(id: $id) {
       id
       title
-      blogID
-      blog {
+      guideID
+      guide {
         id
         name
         posts {
@@ -55,6 +57,7 @@ export const getPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -81,12 +84,13 @@ export const listPosts = /* GraphQL */ `
       items {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -106,12 +110,13 @@ export const getComment = /* GraphQL */ `
       post {
         id
         title
-        blogID
-        blog {
+        guideID
+        guide {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -138,7 +143,7 @@ export const listComments = /* GraphQL */ `
         post {
           id
           title
-          blogID
+          guideID
           createdAt
           updatedAt
         }
