@@ -1,13 +1,20 @@
 type Guide @model @auth(
     rules: [
       { allow: owner, operations: [create, update, delete, read] },
+      { allow: public, operations: [read] }
     ]) {
   id: ID!
   name: String!
   posts: [Post] @connection(keyName: "byGuide", fields: ["id"])
 }
 
-type Post @model @key(name: "byGuide", fields: ["guideID"]) {
+type Post @model 
+    @auth(
+      rules: [
+        { allow: owner, operations: [create, update, delete, read] },
+        { allow: public, operations: [read] }
+      ])
+    @key(name: "byGuide", fields: ["guideID"]) {
   id: ID!
   title: String!
   guideID: ID!
@@ -15,7 +22,13 @@ type Post @model @key(name: "byGuide", fields: ["guideID"]) {
   comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
 }
 
-type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
+type Comment @model 
+    @auth(
+      rules: [
+        { allow: owner, operations: [create, update, delete, read] },
+        { allow: public, operations: [read] }
+      ])
+    @key(name: "byPost", fields: ["postID", "content"]) {
   id: ID!
   postID: ID!
   post: Post @connection(fields: ["postID"])

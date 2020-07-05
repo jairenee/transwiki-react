@@ -4,16 +4,16 @@ import { Store } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
 import { configureAppStore } from 'store/configureStore';
-import { NavBar } from '..';
+import { ProfilePage } from '..';
 
 const renderComponent = (store: Store) =>
   render(
     <Provider store={store}>
-      <NavBar />
+      <ProfilePage />
     </Provider>,
   );
 
-describe('<NavBar />', () => {
+describe('<ProfilePage />', () => {
   let store: ReturnType<typeof configureAppStore>;
 
   beforeEach(() => {

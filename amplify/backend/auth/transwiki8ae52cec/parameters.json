@@ -19,10 +19,7 @@
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
         "birthdate",
-        "email",
-        "gender",
-        "phone_number",
-        "preferred_username"
+        "email"
     ],
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
