@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-transwiki-dev-120034-authRole",
+      "UnauthRoleArn": "arn:aws:iam::364363682416:role/amplify-transwiki-dev-120034-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::364363682416:role/amplify-transwiki-dev-120034-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-transwiki-dev-120034-deployment",
+      "UnauthRoleName": "amplify-transwiki-dev-120034-unauthRole",
+      "StackName": "amplify-transwiki-dev-120034",
+      "StackId": "arn:aws:cloudformation:us-east-1:364363682416:stack/amplify-transwiki-dev-120034/60e7b620-bd46-11ea-ae95-0a39c55408a9",
+      "AmplifyAppId": "d3nxfzk16o5osd"
+    },
+    "categories": {
+      "function": {
+        "transwiki5ecd37ffDefineAuthChallenge": {},
+        "transwiki5ecd37ffCreateAuthChallenge": {},
+        "transwiki5ecd37ffVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "6LfruaoZAAAAANnArHKo7Arc-8W9BcG0zsQ6_PDv"
+        },
+        "transwiki5ecd37ffCustomMessage": {
+          "REDIRECTURL": "http://localhost:3000",
+          "EMAILSUBJECT": "Confirm your account",
+          "EMAILMESSAGE": "Heyo what good"
+        }
+      },
+      "auth": {
+        "transwiki5ecd37ff": {}
+      }
+    }
+  }
+}

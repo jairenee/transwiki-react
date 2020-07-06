@@ -1,0 +1,82 @@
+{
+  "function": {
+    "transwiki5ecd37ffDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "transwiki5ecd37ffCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "transwiki5ecd37ffVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "transwiki5ecd37ffCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "auth": {
+    "transwiki5ecd37ff": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "transwiki5ecd37ffDefineAuthChallenge",
+          "triggerProvider": "Cognito",
+          "attributes": ["Arn", "Name"]
+        },
+        {
+          "category": "function",
+          "resourceName": "transwiki5ecd37ffCreateAuthChallenge",
+          "triggerProvider": "Cognito",
+          "attributes": ["Arn", "Name"]
+        },
+        {
+          "category": "function",
+          "resourceName": "transwiki5ecd37ffVerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito",
+          "attributes": ["Arn", "Name"]
+        },
+        {
+          "category": "function",
+          "resourceName": "transwiki5ecd37ffCustomMessage",
+          "triggerProvider": "Cognito",
+          "attributes": ["Arn", "Name"]
+        }
+      ],
+      "customAuth": true
+    }
+  },
+  "api": {
+    "transwiki": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "description": "Public Key",
+                "apiKeyExpirationDays": 7
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authtranswiki5ecd37ff"
+            }
+          }
+        }
+      }
+    }
+  }
+}

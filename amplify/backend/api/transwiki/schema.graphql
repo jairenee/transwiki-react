@@ -1,0 +1,22 @@
+type Guide @model {
+  id: ID!
+  name: String!
+  posts: [Post] @connection(keyName: "byGuide", fields: ["id"])
+}
+
+type Post @model
+    @key(name: "byGuide", fields: ["guideID"]) {
+  id: ID!
+  title: String!
+  guideID: ID!
+  guide: Guide @connection(fields: ["guideID"])
+  comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
+}
+
+type Comment @model
+    @key(name: "byPost", fields: ["postID", "content"]) {
+  id: ID!
+  postID: ID!
+  post: Post @connection(fields: ["postID"])
+  content: String!
+}
