@@ -9,7 +9,7 @@ import ProfilePage from '..';
 const renderComponent = (store: Store) =>
   render(
     <Provider store={store}>
-      <ProfilePage user={''} />
+      <ProfilePage />
     </Provider>,
   );
 

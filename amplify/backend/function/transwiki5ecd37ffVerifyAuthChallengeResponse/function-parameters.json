@@ -5,10 +5,11 @@
   "functionName": "transwiki5ecd37ffVerifyAuthChallengeResponse",
   "resourceName": "transwiki5ecd37ffVerifyAuthChallengeResponse",
   "parentStack": "auth",
-  "triggerEnvs": [],
+  "triggerEnvs": "[]",
   "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/VerifyAuthChallengeResponse",
   "triggerTemplate": "VerifyAuthChallengeResponse.json.ejs",
   "roleName": "transwiki5ecd37ffVerifyAuthChallengeResponse",
   "skipEdit": true,
-  "RECAPTCHASECRET": "6LfruaoZAAAAANnArHKo7Arc-8W9BcG0zsQ6_PDv"
+  "RECAPTCHASECRET": "6LfruaoZAAAAANnArHKo7Arc-8W9BcG0zsQ6_PDv",
+  "triggerEventPath": "VerifyAuthChallengeResponse.event.json"
 }

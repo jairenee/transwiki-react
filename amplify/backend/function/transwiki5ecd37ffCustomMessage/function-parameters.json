@@ -5,12 +5,7 @@
   "functionName": "transwiki5ecd37ffCustomMessage",
   "resourceName": "transwiki5ecd37ffCustomMessage",
   "parentStack": "auth",
-  "triggerEnvs": [
-    {
-      "key": "RESOURCENAME",
-      "value": "resourceName"
-    }
-  ],
+  "triggerEnvs": "[{\"key\":\"RESOURCENAME\",\"value\":\"resourceName\"}]",
   "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/CustomMessage",
   "triggerTemplate": "CustomMessage.json.ejs",
   "roleName": "transwiki5ecd37ffCustomMessage",
@@ -18,5 +13,6 @@
   "REDIRECTURL": "http://localhost:3000",
   "EMAILSUBJECT": "Confirm your account",
   "EMAILMESSAGE": "Heyo what good",
-  "RESOURCENAME": "resourceName"
+  "RESOURCENAME": "resourceName",
+  "triggerEventPath": "CustomMessage.event.json"
 }

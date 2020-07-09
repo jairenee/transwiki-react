@@ -92,7 +92,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-transwiki-dev-120034-deployment",
-          "S3Key": "amplify-builds/transwiki5ecd37ffDefineAuthChallenge-6e795a5865574a527373-build.zip"
+          "S3Key": "amplify-builds/transwiki5ecd37ffDefineAuthChallenge-795748394b5276753633-build.zip"
         }
       }
     },

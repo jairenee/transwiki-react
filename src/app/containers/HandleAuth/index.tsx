@@ -8,7 +8,7 @@ import React, { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 //import styled from 'styled-components/macro';
-import { AuthState } from '@aws-amplify/ui-components';
+//import { AuthState } from '@aws-amplify/ui-components';
 
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { reducer, sliceKey } from './slice';
@@ -16,16 +16,13 @@ import { selectHandleAuth } from './selectors';
 import { handleAuthSaga } from './saga';
 import { RouteComponentProps } from '@reach/router';
 import {
-  AmplifyAuthenticator,
   AmplifySignUp,
   AmplifySignIn,
-  AmplifySignOut,
+  AmplifyAuthenticator,
 } from '@aws-amplify/ui-react';
 
 interface Props extends RouteComponentProps {
-  authState?: AuthState;
-  slot?: string;
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 export function HandleAuth(props: Props) {
@@ -56,6 +53,7 @@ export function HandleAuth(props: Props) {
             {
               type: 'birthdate',
               label: 'Birthday',
+              placeholder: 'MM/DD/YYYY (this cannot be changed later)',
               required: true,
             },
             {
@@ -70,10 +68,16 @@ export function HandleAuth(props: Props) {
               placeholder: 'Password',
               required: true,
             },
+            {
+              type: 'custom:pronouns',
+              label: 'Pronouns (optional)',
+              placeholder: 'she/ze/his',
+              required: false,
+            },
           ]}
         ></AmplifySignUp>
         <AmplifySignIn slot="sign-in" usernameAlias="email"></AmplifySignIn>
-        <AmplifySignOut slot="sign-out"></AmplifySignOut>
+        {props.children}
       </AmplifyAuthenticator>
     </>
   );

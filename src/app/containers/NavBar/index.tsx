@@ -6,16 +6,19 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw, { styled } from 'twin.macro';
 import { Link } from '@reach/router';
-import { AuthState } from '@aws-amplify/ui-components';
+import { AmplifySignOut } from '@aws-amplify/ui-react';
+//import { useSelector } from 'react-redux';
+//import { selectAuthentication } from 'store/authentication/selectors';
 
-interface Props {
-  authData?: any;
-}
+interface Props {}
 
 export function NavBar(props: Props) {
+  //useSelector(state => console.log(state));
+  //console.log(authentication);
+  //let isAuthenticated = false;
+  let profile = null;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
 
@@ -27,11 +30,16 @@ export function NavBar(props: Props) {
 
         <Link to="/">Home</Link>{" | "}
         <Link to="/guides">Guides</Link>{" | "}
-        <Link to="/profile">Profile</Link>{" | "}
-        { !(props.authData === AuthState.SignedIn) ? 
-          <Link to="/login">Login</Link> : 
-          <Link to="/logout">Logout</Link>}
+        <Link to="/profile">Profile</Link>
       </Div>
+      {profile !== null ? (
+            <div>
+              <h1>Hi, {profile}!</h1>
+              <AmplifySignOut />
+            </div>
+          ) : (
+            <h1>Hi, stranger!</h1>
+          )}
     </>
   );
 }

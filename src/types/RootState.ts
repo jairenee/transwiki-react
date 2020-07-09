@@ -3,6 +3,7 @@ import { GuideState } from 'app/containers/Guide/types';
 import { PortfolioState } from 'app/containers/Portfolio/types';
 import { ProfilePageState } from 'app/containers/ProfilePage/types';
 import { HandleAuthState } from 'app/containers/HandleAuth/types';
+import { AuthState } from 'store/authentication/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 /* 
@@ -15,5 +16,6 @@ export interface RootState {
   portfolio?: PortfolioState;
   profilePage?: ProfilePageState;
   handleAuth?: HandleAuthState;
+  authentication?: AuthState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }

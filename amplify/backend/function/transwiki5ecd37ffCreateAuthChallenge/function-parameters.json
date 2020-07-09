@@ -5,9 +5,10 @@
   "functionName": "transwiki5ecd37ffCreateAuthChallenge",
   "resourceName": "transwiki5ecd37ffCreateAuthChallenge",
   "parentStack": "auth",
-  "triggerEnvs": [],
+  "triggerEnvs": "[]",
   "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/CreateAuthChallenge",
   "triggerTemplate": "CreateAuthChallenge.json.ejs",
   "roleName": "transwiki5ecd37ffCreateAuthChallenge",
-  "skipEdit": true
+  "skipEdit": true,
+  "triggerEventPath": "CreateAuthChallenge.event.json"
 }

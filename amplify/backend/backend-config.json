@@ -19,6 +19,23 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "AdminQueriesbcd21110": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "transwiki5ecd37ff",
+          "attributes": ["UserPoolId"]
+        }
+      ]
+    },
+    "transwiki5ecd37ffPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "auth": {
@@ -49,9 +66,31 @@
           "resourceName": "transwiki5ecd37ffCustomMessage",
           "triggerProvider": "Cognito",
           "attributes": ["Arn", "Name"]
+        },
+        {
+          "category": "function",
+          "resourceName": "transwiki5ecd37ffPostConfirmation",
+          "triggerProvider": "Cognito",
+          "attributes": ["Arn", "Name"]
         }
       ],
       "customAuth": true
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "transwiki5ecd37ff",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ]
     }
   },
   "api": {
@@ -77,6 +116,22 @@
           }
         }
       }
+    },
+    "AdminQueries": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "transwiki5ecd37ff",
+          "attributes": ["UserPoolId"]
+        },
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesbcd21110",
+          "attributes": ["Arn", "Name"]
+        }
+      ]
     }
   }
 }

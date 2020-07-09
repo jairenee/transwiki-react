@@ -22,6 +22,9 @@
           "REDIRECTURL": "http://localhost:3000",
           "EMAILSUBJECT": "Confirm your account",
           "EMAILMESSAGE": "Heyo what good"
+        },
+        "transwiki5ecd37ffPostConfirmation": {
+          "GROUP": "Creators"
         }
       },
       "auth": {

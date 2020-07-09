@@ -5,8 +5,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
 import { InjectedReducersType } from 'utils/types/injector-typings';
-
-//import { NavBarReducer } from '../app/containers/NavBar/reducer';
+import { reducer as authenticationReducer } from './authentication/slice';
 
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
@@ -17,7 +16,7 @@ export function createReducer(injectedReducers: InjectedReducersType = {}) {
     return state => state;
   } else {
     return combineReducers({
-      //navBar: NavBarReducer,
+      authenticationReducer,
       ...injectedReducers,
     });
   }

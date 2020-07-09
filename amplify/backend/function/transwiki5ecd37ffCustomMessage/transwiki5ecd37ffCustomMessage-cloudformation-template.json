@@ -116,7 +116,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-transwiki-dev-120034-deployment",
-          "S3Key": "amplify-builds/transwiki5ecd37ffCustomMessage-34456a736b6742466e6e-build.zip"
+          "S3Key": "amplify-builds/transwiki5ecd37ffCustomMessage-6d4c7a786b745647524f-build.zip"
         }
       }
     },

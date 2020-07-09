@@ -1,0 +1,14 @@
+{
+  "trigger": true,
+  "modules": ["add-to-group"],
+  "parentResource": "transwiki5ecd37ff",
+  "functionName": "transwiki5ecd37ffPostConfirmation",
+  "resourceName": "transwiki5ecd37ffPostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "roleName": "transwiki5ecd37ffPostConfirmation",
+  "skipEdit": true,
+  "GROUP": "Creators"
+}

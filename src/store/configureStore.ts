@@ -5,8 +5,8 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors';
 import createSagaMiddleware from 'redux-saga';
-
 import { createReducer } from './reducers';
+//import { sliceKey } from './authentication/slice';
 
 export function configureAppStore() {
   const reduxSagaMonitorOptions = {};

@@ -1,4 +1,1 @@
-{
-  "modules": "captcha-define-challenge",
-  "resourceName": "transwiki5ecd37ffDefineAuthChallenge"
-}
+{ "modules": "captcha-define-challenge" }

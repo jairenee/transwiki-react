@@ -1,4 +1,1 @@
-{
-  "modules": "captcha-verify",
-  "resourceName": "transwiki5ecd37ffVerifyAuthChallengeResponse"
-}
+{ "modules": "captcha-verify" }
