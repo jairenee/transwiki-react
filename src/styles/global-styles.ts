@@ -1,6 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "Oswald";
+    src: url('./fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  }
+ 
+  @font-face {
+    font-family: "Source Sans Pro";
+    src: url('./fonts/SourceSansPro-Light.ttf') format('truetype');
+  }
+ 
   html,
   body {
     height: 100%;

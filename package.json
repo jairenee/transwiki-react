@@ -132,7 +132,6 @@
     "autoprefixer": "9.8.4",
     "babel-plugin-macros": "2.8.0",
     "postcss-cli": "7.1.1",
-    "tailwind.macro": "0.5.10",
     "tailwindcss": "1.4.6",
     "twin.macro": "1.5.0"
   }
